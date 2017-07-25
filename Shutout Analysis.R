@@ -7,16 +7,16 @@ require(dplyr);require(ggplot2)
 ### Load Datasets ### #All data comes from Corsica PBP Data
 pbpdata <- list()
 pbpdatabyseason <- c(
-       "C:/Users/Steve/Desktop/Hockey Analytics/R Data/Corsica PBP Data/pbp20072008.RDS",
-       "C:/Users/Steve/Desktop/Hockey Analytics/R Data/Corsica PBP Data/pbp20082009.RDS",
-       "C:/Users/Steve/Desktop/Hockey Analytics/R Data/Corsica PBP Data/pbp20092010.RDS",
-       "C:/Users/Steve/Desktop/Hockey Analytics/R Data/Corsica PBP Data/pbp20102011.RDS",
-       "C:/Users/Steve/Desktop/Hockey Analytics/R Data/Corsica PBP Data/pbp20112012.RDS",
-       "C:/Users/Steve/Desktop/Hockey Analytics/R Data/Corsica PBP Data/pbp20122013.RDS",
-       "C:/Users/Steve/Desktop/Hockey Analytics/R Data/Corsica PBP Data/pbp20132014.RDS",
-       "C:/Users/Steve/Desktop/Hockey Analytics/R Data/Corsica PBP Data/pbp20142015.RDS",
-       "C:/Users/Steve/Desktop/Hockey Analytics/R Data/Corsica PBP Data/pbp20152016.RDS",
-       "C:/Users/Steve/Desktop/Hockey Analytics/R Data/Corsica PBP Data/pbp20162017.RDS")
+       "./Corsica PBP Data/pbp20072008.RDS",
+       "./Corsica PBP Data/pbp20082009.RDS",
+       "./Corsica PBP Data/pbp20092010.RDS",
+       "./Corsica PBP Data/pbp20102011.RDS",
+       "./Corsica PBP Data/pbp20112012.RDS",
+       "./Corsica PBP Data/pbp20122013.RDS",
+       "./Corsica PBP Data/pbp20132014.RDS",
+       "./Corsica PBP Data/pbp20142015.RDS",
+       "./Corsica PBP Data/pbp20152016.RDS",
+       "./Corsica PBP Data/pbp20162017.RDS")
 
 pbpdata <- lapply(pbpdatabyseason, function (x) readRDS(x))
 
