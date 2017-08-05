@@ -28,7 +28,8 @@ rm(pbpdata);rm(pbpdatabyseason)
 
 ### Shot Attempts Data Frame ###
 ShotAttemptsSummary <- pbp20162017 %>% #change data source depending on year of analysis
-  filter(Event == "GOAL" | Event == "SHOT" | Event == "BLOCK" | Event == "MISS") %>%
+  filter(Event == "GOAL" | Event == "SHOT" | Event == "BLOCK" | Event == "MISS",
+         Period <= "4") %>%
   mutate(H.Event = ifelse(Home.Team == ev.team,1,0),
          A.Event = ifelse(Away.Team == ev.team,1,0),
          Duration = as.numeric(Duration),
